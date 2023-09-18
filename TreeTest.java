@@ -121,7 +121,7 @@ public class TreeTest {
 
         test.deleteTree("file2.txt");//input3
 
-        int deletedCounterN = 0;//counts times input appears
+        int deletedCounterN = 0;//counts times inp';ut appears
         int deletedCounterY = 0;//counts times input3 appears
         BufferedReader br = new BufferedReader(new FileReader(file));
         while(br.ready()) {
