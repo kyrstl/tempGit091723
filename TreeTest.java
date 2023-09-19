@@ -16,15 +16,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import Utilities.FileUtils;
+
 public class TreeTest {
      @BeforeAll
     static void setUpBeforeClass() throws Exception {
-        File testFile = new File("file1");
-        testFile.createNewFile();
-        PrintWriter pw = new PrintWriter(new FileWriter("file1"));
-        
-        pw.print("derpderpderp");
-        pw.close();
+        FileUtils.createFile("file1");
+        FileUtils.writeFile("file1", "derpderpderp");
 
         //initializes an index file + adds blobs to it?
         Index ind = new Index();
@@ -39,6 +37,9 @@ public class TreeTest {
          * Utils.deleteFile("index");
          * Utils.deleteDirectory("objects");
          */
+
+        FileUtils.deleteFile("file1");
+        FileUtils.deleteDirectory("./objects");
     }
 
     @Test

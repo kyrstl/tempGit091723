@@ -3,8 +3,8 @@ import java.security.NoSuchAlgorithmException;
 import Utilities.FileUtils;
 
 public class treetester {
-    protected static String fileName = "example.txt";
-    protected static String folderName = "examplefolder";
+    protected static String fileName = "andrew.txt";
+    protected static String folderName = "andrewfolder";
     protected static String content = "Hello World!";
     public static void main (String[] args) throws Exception {
         //Blob test = new Blob("example.txt");
@@ -60,7 +60,7 @@ public class treetester {
         FileUtils.createFile(fileName);
         FileUtils.createDirectory(folderName);
 
-        FileUtils.writeFile(fileName, content);
+        /*FileUtils.writeFile(fileName, content);
 
         String content = FileUtils.readFile(fileName);
         String sha = FileUtils.sha1(content);
@@ -68,7 +68,7 @@ public class treetester {
         FileUtils.deleteFile(fileName);
         FileUtils.deleteDirectory(folderName);
 
-        FileUtils.fileExists(fileName);
+        FileUtils.fileExists(fileName);*/
 
         System.out.println("hHIHIHHIHIHIHI");
     }
